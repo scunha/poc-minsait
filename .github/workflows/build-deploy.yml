@@ -90,7 +90,7 @@ jobs:
           terraform_wrapper: false 
     
       - name: Terraform init 
-        run: terraform init -force-copy
+        run: terraform init -no-color
         working-directory: ${{ env.working-directory }}
 
       - name: Terraform plan

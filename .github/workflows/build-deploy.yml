@@ -88,6 +88,9 @@ jobs:
         uses: hashicorp/setup-terraform@v1
         with:
           terraform_wrapper: false 
+        
+      - name: Azure login
+        run: az login
 
       - name: Terraform init
         run: terraform init

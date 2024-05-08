@@ -89,8 +89,8 @@ jobs:
         with:
           terraform_wrapper: false 
     
-      - name: Terraform init
-        run: terraform init
+      - name: Terraform init 
+        run: terraform init -force-copy
         working-directory: ${{ env.working-directory }}
 
       - name: Terraform plan

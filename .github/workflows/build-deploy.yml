@@ -85,13 +85,10 @@ jobs:
           regex: false
 
       - name: Install terraform
-        uses: hashicorp/setup-terraform@v1
+        uses: hashicorp/setup-terraform@v3
         with:
           terraform_wrapper: false 
-        
-      - name: Azure login
-        run: az login
-
+    
       - name: Terraform init
         run: terraform init
         working-directory: ${{ env.working-directory }}

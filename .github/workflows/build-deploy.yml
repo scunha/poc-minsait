@@ -90,7 +90,7 @@ jobs:
           terraform_wrapper: false 
     
       - name: Terraform init 
-        run: terraform init -no-color
+        run: terraform init -reconfigure
         working-directory: ${{ env.working-directory }}
 
       - name: Terraform plan
